@@ -42,7 +42,7 @@ fi
 
 cd /home/container/garrysmod
 git branch ${GITHUB_BRANCH}
-git pull
+git pull https://${GITHUB_USER}:${GITHUB_TOKEN}@${GITHUB_URL} ${GITHUB_BRANCH}
 cd /home/container
 
 # Display the command we're running in the output, and then execute it with the env
