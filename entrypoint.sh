@@ -41,7 +41,8 @@ else
 fi
 
 cd /home/container/garrysmod
-git pull ${GITHUB_BRANCH}
+git branch ${GITHUB_BRANCH}
+git pull
 cd /home/container
 
 # Display the command we're running in the output, and then execute it with the env
