@@ -41,12 +41,14 @@ else
 fi
 
 cd /home/container/garrysmod
-if [[ -d .git ]] then 
+if [[ -d .git ]];
+then 
     git branch ${GITHUB_BRANCH}
     git pull https://${GITHUB_USER}:${GITHUB_TOKEN}@${GITHUB_URL} ${GITHUB_BRANCH}
     cd /home/container
 fi;
-if ![[ -d .git ]] then
+if ![[ -d .git ]];
+then
     git init
     git remote add origin https://${GITHUB_USER}:${GITHUB_TOKEN}@${GITHUB_URL}
     git pull --rebase origin ${GITHUB_BRANCH}
