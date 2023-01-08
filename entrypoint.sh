@@ -47,7 +47,7 @@ then
     git pull https://${GITHUB_USER}:${GITHUB_TOKEN}@${GITHUB_URL} ${GITHUB_BRANCH}
     cd /home/container
 fi;
-if ![[ -d .git ]];
+if [[ ! -d .git ]];
 then
     git init
     git remote add origin https://${GITHUB_USER}:${GITHUB_TOKEN}@${GITHUB_URL}
