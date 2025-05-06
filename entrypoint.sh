@@ -41,6 +41,7 @@ else
 fi
 
 cd /home/container/garrysmod
+git config --global http.postBuffer 1048576000
 if [[ -d .git ]];
 then 
     git branch ${GITHUB_BRANCH}
